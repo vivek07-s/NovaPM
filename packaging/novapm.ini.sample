@@ -1,0 +1,20 @@
+# NovaPM settings - copy to  ~/.config/novapm/novapm.ini  (Linux)  or  %APPDATA%\NovaPM\novapm.ini  (Windows)
+# Every key is optional. Use `novapm-cli config set KEY VALUE` or the "Save settings" button in the GUI.
+
+# --- Threshold guard -----------------------------------------------------------
+enabled = true           # master switch
+auto_stop = true         # false = alerts only, never suspend anything
+warn_pct = 60            # alert when a process reaches this usage (%)
+stop_pct = 80            # suspend the process at this usage (%) ...
+stop_sustain = 3         # ... if it stays there for this many consecutive samples
+alert_cooldown_s = 30    # minimum seconds between repeat alerts for one process
+resume_grace_s = 60      # no auto-stop for this long after the user resumes a process
+watch_cpu = true
+watch_mem = true         # memory usage as % of total RAM
+normalize_cpu = false    # false: % of ONE core (as in the table), true: % of the whole machine
+
+# --- Collector and database ----------------------------------------------------
+refresh_ms = 1000
+db_every_s = 5
+db_enabled = true
+db_path = novapm.db

@@ -1,0 +1,24 @@
+# Build directory
+build/
+cmake-build-*/
+
+# Executable files
+*.exe
+*.dll
+*.a
+*.o
+*.obj
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE files
+.vscode/
+.idea/
+
+# Temporary files
+*.log
+.DS_Store
+imgui.ini
